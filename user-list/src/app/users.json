@@ -1,0 +1,49 @@
+{
+  "users" : [
+    {
+      "id" : 1,
+      "firstName" : "Aram",
+      "lastName" : "Tadevosyan",
+      "middleName" : "",
+      "email" : "example@mail.com",
+      "phoneNumber" : "+37494824242",
+      "gender" : "male",
+      "isActivated" : true,
+      "birthDate" : "06/10/2006",
+      "profileImgUrl" : "https://smthng.com/img1.png",
+      "language" :"Armenian",
+      "nationality" : "Armenian",
+      "recitations" : ""
+    },
+    {
+      "id" : 2,
+      "firstName" : "Sarah",
+      "lastName" : "Jackson",
+      "middleName" : "",
+      "email" : "something@mail.com",
+      "phoneNumber" : "+15031439812",
+      "gender" : "female",
+      "isActivated" : true,
+      "birthDate" : "03/29/1998",
+      "profileImgUrl" : "https://smthng.com/img2.png",
+      "language" :"English",
+      "nationality" : "American",
+      "recitations" : ""
+    },
+    {
+      "id" : 3,
+      "firstName" : "Sun",
+      "lastName" : "Liang",
+      "middleName" : "",
+      "email" : "example3@mail.com",
+      "phoneNumber" : "+38233546356",
+      "gender" : "male",
+      "isActivated" : false,
+      "birthDate" : "11/14/1974",
+      "profileImgUrl" : "https://smthng.com/img5.png",
+      "language" :"Chinese",
+      "nationality" : "Chinese",
+      "recitations" : ""
+    }
+  ]
+}

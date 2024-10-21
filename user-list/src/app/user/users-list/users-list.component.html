@@ -1,0 +1,31 @@
+<div class="mat-table-container">
+    <table mat-table [dataSource]="dataSource()" class="mat-elevation-z8 users-table">
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef>ID</th>
+            <th mat-cell *matCellDef="let user"> {{ user.id }}</th>
+        </ng-container>
+
+        <ng-container matColumnDef="first-name">
+            <th mat-header-cell *matHeaderCellDef>First Name</th>
+            <th mat-cell *matCellDef="let user"> {{ user.firstName }}</th>
+        </ng-container>
+
+        <ng-container matColumnDef="last-name">
+            <th mat-header-cell *matHeaderCellDef>Last Name</th>
+            <th mat-cell *matCellDef="let user"> {{ user.lastName }}</th>
+        </ng-container>
+
+        <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef>Email</th>
+            <th mat-cell *matCellDef="let user"> {{ user.email }}</th>
+        </ng-container>
+
+        <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef>Status</th>
+            <th mat-cell *matCellDef="let user"> {{ user.isActivated ? 'Active' : 'Inactive' }}</th>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns" (click)="onSelectUser(row)"></tr>
+    </table>
+</div>
