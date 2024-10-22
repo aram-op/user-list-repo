@@ -1,10 +1,17 @@
-
+:root {
+    --background-color : #e8e8e8;
+    --cell-color: #f4f4f4;
+    --header-cell-color: #bdbdbd;
+    --font-color: #282828;
+    --row-border-color: #f8f8f8;
+    --row-hover-color: #e0e0e0;
+}
 html, body {
     height: 100%;
 }
 
 body {
-    background-color: #e8e8e8;
+    background-color: var(--background-color);
     font-family: Roboto, "Helvetica Neue", sans-serif;
     margin: 0;
     padding: 20px;
@@ -17,5 +24,5 @@ mat-form-field .mdc-text-field--outlined .mdc-notched-outline {
 mat-form-field .mdc-notched-outline__notch,
 mat-form-field .mdc-notched-outline__leading,
 mat-form-field .mdc-notched-outline__trailing {
-    background-color: #f4f4f4;
+    background-color: var(--cell-color);
 }

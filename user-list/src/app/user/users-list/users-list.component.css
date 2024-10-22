@@ -7,13 +7,9 @@
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-mat-paginator {
-    background-color: #f4f4f4;
-}
-
 th.mat-mdc-header-cell,
 [mat-cell] {
-    color: #282828;
+    color: var(--font-color);
     font-family: sans-serif;
     font-size: 16px;
     font-weight: 500;
@@ -22,20 +18,24 @@ th.mat-mdc-header-cell,
 }
 
 [mat-cell] {
-    border-bottom: 1px solid #f8f8f8;
+    border-bottom: 1px solid var(--row-border-color);
 }
 
 th.mat-mdc-header-cell {
-    background-color: #bdbdbd;
+    background-color: var(--header-cell-color);
     border: none;
     font-weight: bold;
 }
 
 tr.mat-mdc-row {
-    background-color: #f4f4f4;
+    background-color: var(--cell-color);
 }
 
 tr.mat-mdc-row:hover {
-    background-color: #e0e0e0;
+    background-color: var(--row-hover-color);
     cursor: pointer;
+}
+
+mat-paginator {
+    background-color: var(--cell-color);
 }
