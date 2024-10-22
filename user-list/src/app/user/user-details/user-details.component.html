@@ -1,0 +1,76 @@
+<app-header title="User Details"/>
+
+<form [formGroup]="userDetailsForm" (ngSubmit)="onSubmit()">
+
+    <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" formControlName="email">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Date of Birth</mat-label>
+        <input matInput formControlName="birthDate" [matDatepicker]="picker">
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>First Name</mat-label>
+        <input matInput type="text" formControlName="firstName">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Middle Name</mat-label>
+        <input matInput type="text" formControlName="middleName">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Last Name</mat-label>
+        <input matInput type="text" formControlName="lastName">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Is Activated</mat-label>
+        <mat-select formControlName="isActivated">
+            <mat-option value="true">Activated</mat-option>
+            <mat-option value="false">Not Activated</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Profile Image Url</mat-label>
+        <input matInput type="text" formControlName="imageUrl">
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline">
+        <mat-label>Phone Number</mat-label>
+        <input matInput type="text" formControlName="phoneNumber">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Gender</mat-label>
+        <mat-select formControlName="gender">
+            <mat-option value="male">Male</mat-option>
+            <mat-option value="female">Female</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Main Language</mat-label>
+        <input matInput type="text" formControlName="language">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Nationality</mat-label>
+        <input matInput type="text" formControlName="nationality">
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline">
+        <mat-label>Recitations</mat-label>
+        <input matInput type="text" formControlName="recitations">
+    </mat-form-field>
+
+    <button mat-flat-button type="submit" [disabled]="formIsInvalid">Update</button>
+</form>

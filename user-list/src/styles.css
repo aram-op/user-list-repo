@@ -7,4 +7,15 @@ body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
     background-color: #e8e8e8;
+    padding: 20px;
+}
+
+mat-form-field .mdc-text-field--outlined .mdc-notched-outline {
+    z-index: 0
+}
+
+mat-form-field .mdc-notched-outline__notch,
+mat-form-field .mdc-notched-outline__leading,
+mat-form-field .mdc-notched-outline__trailing {
+    background-color: #f4f4f4;
 }
