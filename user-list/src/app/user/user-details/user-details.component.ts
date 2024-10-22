@@ -44,6 +44,10 @@ export class UserDetailsComponent {
         this.usersService.updateUser(this.userDetailsForm, +this.userId());
     }
 
+    onCancel() {
+        this.router.navigate(['users/list']);
+    }
+
     updateUserDetails() {
         let user = this.usersService.getUserById(+this.userId());
 

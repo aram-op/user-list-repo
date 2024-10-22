@@ -1,13 +1,14 @@
 form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 95%;
     height: 60%;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+    max-height: 650px;
 }
 
 form mat-form-field {
-    width: 40%;
     margin: 10px 25px;
+    width: 95%;
 }
 
 mat-label {
@@ -15,10 +16,10 @@ mat-label {
 }
 
 button {
-    width: 30%;
-    height: 8%;
     border-radius: 10px;
-    margin: 10px 25px;
     font-size: 18px;
     font-weight: 400;
+    height: 100%;
+    margin: 10px 25px;
+    width: 60%;
 }
