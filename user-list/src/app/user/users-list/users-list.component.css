@@ -1,12 +1,14 @@
 .mat-table-container {
     margin: 60px auto;
     width: 95%;
-}
-
-.mat-mdc-table {
+    max-height: 70%;
+    overflow: auto;
     border-radius: 10px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
+}
+
+mat-paginator {
+    background-color: #f4f4f4;
 }
 
 th.mat-mdc-header-cell,
@@ -35,4 +37,5 @@ tr.mat-mdc-row {
 
 tr.mat-mdc-row:hover {
     background-color: #e0e0e0;
+    cursor: pointer;
 }

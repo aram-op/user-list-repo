@@ -11,5 +11,6 @@ import {HeaderComponent} from '../header/header.component';
   styleUrl: './not-found.component.css'
 })
 export class NotFoundComponent {
-  title = 'Not Found';
+  headerTitle = '404 Error';
+  title = 'Page Not Found';
 }
