@@ -42,6 +42,7 @@ export class UserDetailsComponent {
 
     onSubmit() {
         this.usersService.updateUser(this.userDetailsForm, +this.userId());
+        this.router.navigate(['users/list']);
     }
 
     onCancel() {
