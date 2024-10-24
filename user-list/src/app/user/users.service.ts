@@ -1,7 +1,7 @@
 import {Injectable, signal} from '@angular/core';
 import {User} from './user.model';
-import {usersData} from '../users';
 import {FormGroup} from '@angular/forms';
+import * as data from '../../assets/users.json'
 
 @Injectable({
     providedIn: 'root'
@@ -10,14 +10,7 @@ export class UsersService {
     users = signal<User[]>([]);
 
     constructor() {
-        let localData = window.localStorage.getItem('users');
-
-        if (localData) {
-            this.users.set(JSON.parse(localData));
-        } else {
-            this.users.set(usersData);
-            window.localStorage.setItem('users', JSON.stringify(this.users()));
-        }
+        this.users.set(data.users as User[]);
     }
 
     getUserById(id: number) {
@@ -46,6 +39,5 @@ export class UsersService {
         this.users.set(this.users().map((elem) => {
             return elem.id === id ? user : elem
         }));
-        window.localStorage.setItem('users', JSON.stringify(this.users()));
     }
 }
