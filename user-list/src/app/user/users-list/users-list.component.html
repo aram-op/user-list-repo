@@ -1,6 +1,6 @@
 <app-header title="Users List"/>
 
-<div class="mat-table-container">
+<div class="mat-table-container" #matTableContainer>
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 users-table">
         <ng-container matColumnDef="id">
             <th mat-header-cell *matHeaderCellDef>ID</th>
@@ -32,5 +32,5 @@
         <tr mat-footer-row></tr>
     </table>
 
-    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" (page)="onPageChange()"></mat-paginator>
 </div>

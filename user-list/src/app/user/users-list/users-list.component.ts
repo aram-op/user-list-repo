@@ -1,4 +1,4 @@
-import {Component, inject, InputSignal, ViewChild} from '@angular/core';
+import {Component, ElementRef, inject, ViewChild} from '@angular/core';
 import {UsersService} from '../users.service';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import {User} from '../user.model';
@@ -18,7 +18,7 @@ export class UsersListComponent {
     private router = inject(Router);
     dataSource: MatTableDataSource<User>;
     @ViewChild(MatPaginator) paginator!: MatPaginator;
-
+    @ViewChild('matTableContainer') matTableContainerElem!: ElementRef;
 
     displayedColumns: string[] = ['id', 'first-name', 'last-name', 'email', 'status'];
 
@@ -38,5 +38,13 @@ export class UsersListComponent {
 
     onSelectUser(selectedUser: User) {
         this.router.navigate([`users/${selectedUser.id}`]);
+    }
+
+    onPageChange() {
+        this.matTableContainerElem.nativeElement.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        });
     }
 }

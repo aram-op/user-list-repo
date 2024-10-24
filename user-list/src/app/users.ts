@@ -1,4 +1,6 @@
-export let usersData: [
+import {User} from './user/user.model';
+
+export let usersData: User[] = [
     {
         'id': 1,
         'firstName': 'Aram',
@@ -839,4 +841,4 @@ export let usersData: [
         'nationality': 'Irish',
         'recitations': ''
     }
-]
+];
