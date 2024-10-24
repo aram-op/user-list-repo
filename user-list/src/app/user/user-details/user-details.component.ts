@@ -54,8 +54,23 @@ export class UserDetailsComponent {
 
         if (!user) {
             this.router.navigate(['not-found']);
+            this.userDetailsForm = this.formBuilder.group({
+                email: new FormControl('', [Validators.required, Validators.email]),
+                birthDate: new FormControl(new Date(), Validators.required),
+                firstName: new FormControl('', Validators.required),
+                middleName: new FormControl(''),
+                lastName: new FormControl('', Validators.required),
+                isActivated: new FormControl('', Validators.required),
+                imageUrl: new FormControl(''),
+                phoneNumber: new FormControl('', Validators.required),
+                gender: new FormControl('', Validators.required),
+                language: new FormControl('', Validators.required),
+                nationality: new FormControl('', Validators.required),
+                recitations: new FormControl(''),
+            });
             return;
         }
+
 
         this.userDetailsForm = this.formBuilder.group({
             email: new FormControl(user?.email, [Validators.required, Validators.email]),
